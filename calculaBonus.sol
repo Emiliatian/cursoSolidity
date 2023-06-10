@@ -1,30 +1,21 @@
 // SPDX-License-Identifier: MIT
-//0x71Dd3A7C053DC0C1626De72e6e20a49daBe72262
 pragma solidity 0.8.20;
-
+//0xb724a70748f2924e5c3D1aeeBc8E4114D5A954D9
 contract CalculaBonus {
     string public vendedor;
-    uint256 fator;
+    uint256 public fator;
 
      constructor (
         string memory nomeVendedor, 
-        uint256 fatorBonus,
-        uint256 valorBonus) 
-
-    public {
+        uint256 fatorBonus) {
         vendedor = nomeVendedor;
         fator = fatorBonus;
     }
 
-    function valorVendas() public view returns (uint256) {
-        return vendas;
-    }
-
-
-    function calculaBonus(uint256 vendas, uint256 fatorBonus) public view
+    function calculaBonus(uint256 vendas) public view
         returns(uint256 valorBonus) {
 
-        valorBonus = vendas*fatorBonus;
+        valorBonus = vendas*fator;
 
         return valorBonus;
     } 
