@@ -11,7 +11,6 @@ contract CalculaAluguel {
     constructor (string memory _nomeLocador, string memory _nomeLocatario, uint256 _valorAluguel) {
         locador = _nomeLocador;
         locatario = _nomeLocatario;
-        //aluguel[] = valorAluguel;
         for (uint i; i < periodoEmMesesDoAluguel; i++) {
             aluguel.push(_valorAluguel);
         }
